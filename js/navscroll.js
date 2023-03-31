@@ -1,6 +1,4 @@
 // JavaScript Document
-// Toggle the .nav-bar-scroll class when the user 
-// scroll 100px 
 window.onscroll = () => {scrollNavbar()};
 
 const scrollNavbar = () => {
