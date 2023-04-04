@@ -1,10 +1,10 @@
 // JavaScript Document
-window.onscroll = () => {scrollNavbar()};
+window.onloard = window.onscroll = () => {scrollNavbar()};
 
 const scrollNavbar = () => {
     const navBar = document.getElementById("navBar");
 
-  if (document.documentElement.scrollTop > 25) {
+  if (document.documentElement.scrollTop > 1) {
     navBar.classList.add("nav-bar-scroll");
   } else {
     navBar.classList.remove("nav-bar-scroll");

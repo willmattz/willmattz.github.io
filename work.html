@@ -1,10 +1,120 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Work</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Work</title>
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="https://use.typekit.net/igs6hlr.css">
+	<link rel="icon" type="image/x-icon" href="icon/favicon-256.ico">
 </head>
 
 <body>
+	<nav id="navBar">
+		<div class="hamburger-parent">
+			<input class="toggler" type="checkbox">
+			<div class="hamburger">
+				<div>
+				</div>
+			</div>
+			<div class="home">
+				<a class="home-btn" href="index.html">
+					<img id="logo-mint" class="home-btn-img" src="img/logo/wm-logo-mint.png" alt="Will Matthews logo links to homepage">
+				</a>
+			</div>
+			<div class="nav-menu">
+				<div class="nav-menu-wrapper">
+					<div class="nav-column-left">
+						<div class="nav-menu-items">
+							<ul>
+								<li id="home">
+									<a class="nav-link" href="index.html">home</a>
+								</li>
+								<li id="work" class="nav-link-selected">
+									<a class="nav-link nav-link-selected" href="work.html">work</a>
+								</li>
+								<li id="about">
+									<a class="nav-link" href="about.html">about</a>
+								</li>
+								<li id="contact">
+									<a class="nav-link" href="contact.html">contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="nav-column-right">
+						<div class="nav-menu-buttons">
+							<h5 class="nav-sub">Connect with me on other platforms:</h5>
+							<div class="nav-email-wrap">
+								<a href="mailto:willgmatthews@gmail.com" class="nav-email">willgmatthews@gmail.com</a>
+							</div>
+							<div class="nav-social">
+								<a class="nav-social-btn-1" target="_blank" href="https://www.instagram.com/willmatthws/">
+									<img id="ig-cream" class="nav-social-btn-img" src="img/social-buttons/ig-cream.png" alt="Link to Instagram">
+									<img id="ig-mint" class="nav-social-btn-img" src="img/social-buttons/ig-mint.png" alt="Link to Instagram">
+								</a>
+								<a class="nav-social-btn-2" target="_blank" href="https://twitter.com/willmatthws">
+									<img id="twt-cream" class="nav-social-btn-img" src="img/social-buttons/twt-cream.png" alt="Link to Twitter">
+									<img id="twt-mint" class="nav-social-btn-img" src="img/social-buttons/twt-mint.png" alt="Link to Twitter">
+								</a>
+								<a class="nav-social-btn-3" target="_blank" href="https://www.linkedin.com/in/will-matthews-445b4b214/">
+									<img id="li-cream" class="nav-social-btn-img" src="img/social-buttons/li-cream.png" alt="Link to LinkedIn">
+									<img id="li-mint" class="nav-social-btn-img" src="img/social-buttons/li-mint.png" alt="Link to LinkedIn">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="body-content">
+		<div class="indev">
+			<h2>This page is currently under development. Sorry for the inconvenience.</h2>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-content">
+			<p class="footer-text">
+				&copy; <script>document.write(new Date().getFullYear())</script>
+				<br>
+				Will Matthews
+				<br>
+				ALL RIGHTS RESERVED
+			</p>
+			<div class="footer-social">
+				<a id="footer-ig-link" class="footer-social-btn" target="_blank" href="https://www.instagram.com/willmatthws/">
+					<img id="footer-ig-cream" class="footer-social-img" src="img/social-buttons/ig-cream.png" alt="Link to Instagram">
+					<img id="footer-ig-mint" class="footer-social-img" src="img/social-buttons/ig-mint.png" alt="Link to Instagram">
+				</a>
+				<a id="footer-twt-link" class="footer-social-btn" target="_blank" href="https://twitter.com/willmatthws">
+					<img id="footer-twt-cream" class="footer-social-img" src="img/social-buttons/twt-cream.png" alt="Link to Twitter">
+					<img id="footer-twt-mint" class="footer-social-img" src="img/social-buttons/twt-mint.png" alt="Link to Twitter">
+				</a>
+				<a id="footer-li-link" class="footer-social-btn" target="_blank" href="https://www.linkedin.com/in/will-matthews-445b4b214/">
+					<img id="footer-li-cream" class="footer-social-img" src="img/social-buttons/li-cream.png" alt="Link to LinkedIn">
+					<img id="footer-li-mint" class="footer-social-img" src="img/social-buttons/li-mint.png" alt="Link to LinkedIn">
+				</a>
+			</div>
+			<p class="footer-text">Last updated&nbsp;<span class="footer-update"></span></p>
+		</div>
+	</footer>
+	<script src="js/navscroll.js"></script>
+	<script>
+	var myDate = new Date(document.lastModified);
+
+	console.log('toISOString', myDate.toISOString());
+
+	myNewDate = new Intl.DateTimeFormat(
+				"en-US",
+				{year: "numeric", month: "numeric", day: "numeric"}
+	).format(myDate).replace(/\//g, '.');
+
+	console.log('Intl.DateTimeFormat', myNewDate);
+
+	document.querySelector('.footer-update').innerHTML = myDate.toISOString();
+	document.querySelector('.footer-update').innerHTML = myNewDate;
+	</script>
 </body>
 </html>
+

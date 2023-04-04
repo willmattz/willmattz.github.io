@@ -102,6 +102,15 @@ body {
 body::-webkit-scrollbar { 
     display: none;
 }
+.body-content {
+	min-height: 100vh;
+}
+.indev{
+	height: 100vh;
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
 .section {
 	margin: 100px 0px;
 }
@@ -139,6 +148,7 @@ body::-webkit-scrollbar {
 }
 .see-more{
 	transition: all .2s ease;
+	text-decoration: none;
 }
 .see-more:hover {
 	letter-spacing: .25em;
@@ -180,13 +190,17 @@ body::-webkit-scrollbar {
 nav {
 	position: fixed;
 	width: 100%;
-	height: 50px;
+	height: 0px;
 	left: 0;
 	top: 0;
 	z-index: 10;
 	animation: navFade 2s ease;
+	transition: all .4s ease;
 }
 .nav-bar-scroll {
+	background-color: rgba(0,0,0,.5);
+	height: 50px;
+	backdrop-filter: blur(40px);
 }
 @keyframes navFade {
 	0% {
@@ -650,6 +664,8 @@ header {
 }
 /*FOOTER*/
 footer{
+	display: flex;
+	align-items: center;
 	position: relative;
 	background-color: var(--black);
 	width: 100%;
