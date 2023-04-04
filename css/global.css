@@ -102,6 +102,80 @@ body {
 body::-webkit-scrollbar { 
     display: none;
 }
+.section {
+	margin: 100px 0px;
+}
+.center-align {
+	text-align: center;
+}
+.section-wrapper {
+	display: flex;
+	flex-flow: row;
+}
+.column-left-33 {
+	width: 33%;
+	padding: 0px 10px 0px 0px;
+	margin: 0;
+}
+.column-rigth-66 {
+	width: 66%;
+	padding: 0px 0px 0px 10px;
+	margin: 0px;
+}
+.video-wrapper {
+	padding: 10px;
+	border: solid 1px white;
+}
+.video-insert { 
+    right: 0; 
+    bottom: 0;
+    max-width: 100%; 
+    max-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+}
+.see-more{
+	transition: all .2s ease;
+}
+.see-more:hover {
+	letter-spacing: .25em;
+}
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3 1fr);
+}
+.experience-button{
+	display: flex;
+	height: 80px;
+	transition: all .4s ease;
+	margin: auto;
+	align-items: center;
+	opacity: 1;
+}
+.experience-button:hover {
+	opacity: .3;
+}
+#exp-btn-1{
+	grid-column: 1;
+}
+#exp-btn-2{
+	grid-column: 2;
+}
+#exp-btn-3 {
+	grid-column: 3;
+}
+#roar {
+	height: 80px;
+}
+#cable8 {
+	height: 80px;
+}
+#staubli {
+	height: 50px;
+}
 /*NAVBAR*/
 nav {
 	position: fixed;
@@ -655,6 +729,24 @@ footer{
 		width: 90%;
 		margin: 0% 5%;
 	}
+	.section-wrapper {
+		flex-flow: column;
+	}
+	.column-left-33 {
+		width: 100%;
+	}
+	.column-rigth-66 {
+		width: 100%;
+	}
+	#roar {
+	height: 50px;
+	}
+	#cable8 {
+		height: 50px;
+	}
+	#staubli {
+		height: 31px;
+	}
 }
 @media screen and (max-width: 650px) {
 	.nav-menu-wrapper {
@@ -706,5 +798,9 @@ footer{
 	}
 	h2 {
 		font-size: 1.8em;
+	}
+	.grid-3 {
+		display: flex;
+		flex-flow: column;
 	}
 }
