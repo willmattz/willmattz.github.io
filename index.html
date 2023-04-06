@@ -81,19 +81,22 @@
 			<h2>A Washington-based creative specializing in <a class="alt" href="work/video-production.html">video production</a>, <a class="alt" href="work/motion-graphics.html">motion graphics</a>, and <a class="alt" href="work/web-design.html">web design</a>.</h2>
 		</div>
 		<div class="section">
-			<h4 class="center-align">Featured Works</h4>
+			<h4 class="center-align">Featured Work</h4>
 			<div class="section-wrapper">
 				<div class="column-left-33">
 					<h6>2023 Motion Graphics Reel</h6>
 					<p> A selection of motion graphics created over 2022 and 2023.</p>
 					<a class="see-more" href="work/motion-graphics.html"><h5>&#62;&nbsp;See more</h5></a>
 				</div>
-				<div class="column-rigth-66">
+				<div class="column-right-66">
 					<div class="video-wrapper">
-						<video class="video-insert" autoplay muted loop>
-							<source src="vid/motion_graphics_reel_2023.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
+						<a class="video-btn" href="#" onClick="lightboxOpen(); return false;">
+							<video class="video-insert" autoplay muted loop>
+								<source src="vid/motion_graphics_reel_2023.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</a>
+						<img class="play-btn" src="img/misc/play-btn.png" alt="Play Button">
 					</div>
 				</div>
 			</div>
@@ -139,6 +142,13 @@
 			<p class="footer-text">Last updated&nbsp;<span class="footer-update"></span></p>
 		</div>
 	</footer>
+	<div id="featured-lightbox" class="lightbox" onClick="lightboxClose(); return false;">
+		<div class="lightbox-wrapper">
+			<a class="x-btn float-right"><div></div></a>
+			<iframe src="https://www.youtube.com/embed/F28XilIj2d8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="iframe-insert"></iframe>
+			
+		</div>
+	</div>
 	<script src="js/navscroll.js"></script>
 	<script>
 	var myDate = new Date(document.lastModified);
@@ -154,6 +164,18 @@
 
 	document.querySelector('.footer-update').innerHTML = myDate.toISOString();
 	document.querySelector('.footer-update').innerHTML = myNewDate;
+	</script>
+	<script>
+	function lightboxOpen() {
+	var lightBox = document.getElementById('featured-lightbox');
+	lightBox.style.visibility = 'visible';
+	lightBox.style.opacity = '1'
+	}
+	function lightboxClose() {
+	var lightBox = document.getElementById('featured-lightbox');
+	lightBox.style.visibility = 'hidden';
+	lightBox.style.opacity = '0'
+	}
 	</script>
 </body>
 </html>

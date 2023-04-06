@@ -1,5 +1,5 @@
 // JavaScript Document
-window.onloard = window.onscroll = () => {scrollNavbar()};
+window.onload = window.onscroll = () => {scrollNavbar()};
 
 const scrollNavbar = () => {
     const navBar = document.getElementById("navBar");
