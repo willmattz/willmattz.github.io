@@ -76,8 +76,31 @@ p {
 	font-family: "basic-sans", sans-serif;
 	font-weight: 300;
 	font-size: 1.4em;
-	line-height: 1.8em;
+	line-height: 1.4em;
 	color: var(--cream);
+}
+.alt2 {
+	position: relative;
+	display: inline-block;
+	font-weight: 300;
+	color: var(--mint);
+	text-decoration: none;
+}
+.alt2::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0px;
+	left: 0;
+	background-color: var(--mint);
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+.alt2:hover::after {
+	transform: scaleX(1);
+  	transform-origin: bottom left;
 }
 .dropcap {
 	font-family: "basic-sans", serif;
@@ -594,6 +617,7 @@ header {
 .section-wrapper {
 	display: flex;
 	flex-flow: row;
+	margin-bottom: 100px;
 }
 .column-left-33 {
 	width: 33%;
@@ -628,10 +652,25 @@ header {
     overflow: hidden;
 	transition: opacity .4s ease;
 }
+.thumbnail {
+	right: 0; 
+    bottom: 0;
+    max-width: 100%; 
+    max-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+	transition: opacity .4s ease;
+}
 .video-btn {
 	z-index: 2;
 }
 .video-btn:hover > .video-insert{
+	opacity: .2;
+}
+.video-btn:hover > .thumbnail{
 	opacity: .2;
 }
 .play-btn {
@@ -717,6 +756,106 @@ header {
 }
 .x-btn:hover > div::before {
 	transform: rotate(0deg);
+}
+.work-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	column-gap: 10px;
+	row-gap: 10px;
+	width: 100%;
+	height: 500px;
+	margin: 100px 0px 0px 0px;
+}
+.work-grid-item {
+	width: 100%;
+	overflow: hidden;
+	transition: all .4s ease;
+	filter: grayscale(1) brightness(.3);
+}
+#work-1 {
+	grid-column: 1;
+	grid-row: 1;
+	background: no-repeat center url("../img/work-nav/joppe-spaa-2iTnaCr0-3I-unsplash.jpg");
+	background-size: cover;
+}
+#work-2 {
+	grid-column: 2;
+	grid-row: 1;
+	background: no-repeat center url("../img/work-nav/balazs-ketyi-U008D4Jp2CY-unsplash.jpg");
+	background-size: cover;
+}
+#work-3 {
+	grid-column: 1;
+	grid-row: 2;
+	background: no-repeat url("../img/work-nav/sarath-p-raj-p8GmCEgSmmo-unsplash.jpg");
+	background-position: 0px -200px;
+	background-size: cover;
+}
+#work-4 {
+	grid-column: 2;
+	grid-row: 2;
+	background: no-repeat center url("../img/work-nav/ilya-pavlov-OqtafYT5kTw-unsplash.jpg");
+	background-size: cover;
+}
+#work-text-1:hover + #work-1 {
+	filter: grayscale(0) brightness(.6);
+}
+#work-text-2:hover + #work-2{
+	filter: grayscale(0) brightness(.6);
+}
+#work-text-3:hover + #work-3{
+	filter: grayscale(0) brightness(.6);
+}
+#work-text-4:hover + #work-4{
+	filter: grayscale(0) brightness(.6);
+}
+.work-grid-text {
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	font-family: "basic-sans", sans-serif;
+	color: var(--cream);
+	font-size: 36px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	text-shadow: 3px 3px 10px black;
+	transition: all .4s ease;
+}
+#work-text-1 {
+	grid-column: 1;
+	grid-row: 1;
+}
+#work-text-2 {
+	grid-column: 2;
+	grid-row: 1;
+}
+#work-text-3 {
+	grid-column: 1;
+	grid-row: 2;
+}
+#work-text-4 {
+	grid-column: 2;
+	grid-row: 2;
+}
+.work-grid-text:hover {
+	color: var(--mint);
+}
+#video-link {
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 2;
+}
+.no-margin {
+	margin: 0;
+}
+.body-link {
+	color: var(--mint);
+}
+.italic {
+	font-style: italic;
 }
 /*FOOTER*/
 footer{
@@ -852,6 +991,44 @@ footer{
 	}
 	#staubli {
 		height: 31px;
+	}
+}
+@media screen and (max-width: 850px){
+	.work-grid {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+	#work-1 {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	#work-2 {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	#work-3 {
+		grid-column: 1;
+		grid-row: 3;
+	}
+	#work-4 {
+		grid-column: 1;
+		grid-row: 4;
+	}
+	#work-text-1 {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	#work-text-2 {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	#work-text-3 {
+		grid-column: 1;
+		grid-row: 3;
+	}
+	#work-text-4 {
+		grid-column: 1;
+		grid-row: 4;
 	}
 }
 @media screen and (max-width: 650px) {
