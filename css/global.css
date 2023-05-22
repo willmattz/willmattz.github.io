@@ -21,6 +21,10 @@ h2 {
 	font-size: 3em;
 	color: var(--cream);
 }
+.mint {
+	color: var(--mint);
+	font-weight: 300;
+}
 .alt {
 	position: relative;
 	display: inline-block;
@@ -629,6 +633,16 @@ header {
 	padding: 0px 0px 0px 10px;
 	margin: 0px;
 }
+.column-left-66 {
+	width: 66%;
+	padding: 0px 10px 0px 0px;
+	margin: 0;
+}
+.column-right-33 {
+	width: 33%;
+	padding: 0px 0px 0px 10px;
+	margin: 0px;
+}
 .video-wrapper {
 	padding: 10px;
 	border: solid 1px white;
@@ -696,6 +710,7 @@ header {
 }
 .experience-button{
 	display: flex;
+	flex-flow: column;
 	height: 80px;
 	transition: all .4s ease;
 	margin: auto;
@@ -857,6 +872,39 @@ header {
 .italic {
 	font-style: italic;
 }
+img.contain {
+	max-width: 100%;
+	
+}
+.skillset-img {
+	max-width: 100%;
+	height: 350px;
+	background-size: cover;
+	filter: saturate(0);
+}
+#video-prod {
+	background-image: url("../img/work-nav/joppe-spaa-2iTnaCr0-3I-unsplash.jpg");
+	background-position: center;
+}
+#motion-graph {
+	background-image: url("../img/work-nav/sarath-p-raj-p8GmCEgSmmo-unsplash.jpg");
+	background-position: center;
+}
+#graph-desgn {
+	background-image: url("../img/work-nav/balazs-ketyi-U008D4Jp2CY-unsplash.jpg");
+	background-position: center;
+}
+#web-desgn {
+	background-image: url("../img/work-nav/ilya-pavlov-OqtafYT5kTw-unsplash.jpg");
+	background-position: center;
+}
+.bw-fade {
+	filter: saturate(0);
+	transition: all .2s ease;
+}
+.bw-fade:hover {
+	filter: saturate(1);
+}
 /*FOOTER*/
 footer{
 	display: flex;
@@ -980,6 +1028,13 @@ footer{
 		width: 100%;
 	}
 	.column-right-66 {
+		padding: 0px;
+		width: 100%;
+	}
+	.column-left-66 {
+		width: 100%;
+	}
+	.column-right-33 {
 		padding: 0px;
 		width: 100%;
 	}
