@@ -69,8 +69,32 @@
 		</div>
 	</nav>
 	<div class="body-content">
-		<div class="indev">
-			<h2>This page is currently under development. Sorry for the inconvenience.</h2>
+		<div class="section"></div>
+		<div class="work-nav">
+			<a class="work-nav-link alt3" href="video-production.html"><h5 class="cream">Video Production</h5></a>
+			<a class="work-nav-link" href="motion-graphics.html"><h5>Motion Graphics</h5></a>
+			<a class="work-nav-link alt3" href="graphic-design.html"><h5 class="cream">Graphic Design</h5></a>
+			<a class="work-nav-link alt3" href="web-design.html"><h5 class="cream">Web Design</h5></a>
+		</div>
+		<div class="section2">
+			<div class="video-wrapper">
+				<a class="video-btn" href="#" onClick="lightboxOpen2(); return false;">
+					<img class="thumbnail" src="../img/thumbnails/updated-intro.png" alt="updatED Thumbnail">
+				</a>
+				<img class="play-btn" src="../img/misc/play-btn.png" alt="Play Button">
+			</div>
+			<h2>updatED Intro - WSU COE</h2>
+			<p><span class="italic mint">Mar. 10, 2023</span> - <span class="italic">updatED</span> is a WSU College of Education weekly newshow covering all important news across all four WSU campuses related to student and faculty work within the college. I was tasked with creating a "news-style" intro that could be used to lead into each weekly edition.</p>
+		</div>
+		<div class="section2">
+			<div class="video-wrapper">
+				<a class="video-btn" href="#" onClick="lightboxOpen3(); return false;">
+					<img class="thumbnail" src="../img/thumbnails/athletes.png" alt="The Athletes Who Grabbed the Bag Thumbnail">
+				</a>
+				<img class="play-btn" src="../img/misc/play-btn.png" alt="Play Button">
+			</div>
+			<h2>The Athletes Who Grabbed the Bag - SPJ Regional Winner</h2>
+			<p><span class="italic mint">December 14, 2022</span> - A retrospective mini-documentary covering NCAA athletes and programs who were mired in scandal of taking illegal payments, and a reflection on the impact this has had on collegiate sports in the wake of NIL adoption. This documentary was recognized by the Society of Professional Journalists for Best Use of Multimedia against other applicants from Alaska, Oregon, Washington, Idaho, and Montana.</p>
 		</div>
 	</div>
 	<footer>
@@ -99,6 +123,18 @@
 			<p class="footer-text">Last updated&nbsp;<span class="footer-update"></span></p>
 		</div>
 	</footer>
+	<div id="lightbox2" class="lightbox" onClick="lightboxClose2(); return false;">
+		<div class="lightbox-wrapper">
+			<a class="x-btn float-right"><div></div></a>
+			<iframe src="https://www.youtube.com/embed/66TG4PlnfZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="iframe-insert"></iframe>
+		</div>
+	</div>
+	<div id="lightbox3" class="lightbox" onClick="lightboxClose3(); return false;">
+		<div class="lightbox-wrapper">
+			<a class="x-btn float-right"><div></div></a>
+			<iframe src="https://www.youtube.com/embed/yTH9thxVehw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="iframe-insert"></iframe>
+		</div>
+	</div>
 	<script src="../js/navscroll.js"></script>
 	<script>
 	var myDate = new Date(document.lastModified);
@@ -114,6 +150,78 @@
 
 	document.querySelector('.footer-update').innerHTML = myDate.toISOString();
 	document.querySelector('.footer-update').innerHTML = myNewDate;
+	</script>
+	<script>
+	function lightboxOpen1() {
+	var lightBox = document.getElementById('lightbox1');
+	lightBox.style.visibility = 'visible';
+	lightBox.style.opacity = '1'
+	}
+	function lightboxClose1() {
+	var lightBox = document.getElementById('lightbox1');
+	lightBox.style.visibility = 'hidden';
+	lightBox.style.opacity = '0'
+	}
+	</script>
+	<script>
+	function lightboxOpen2() {
+	var lightBox = document.getElementById('lightbox2');
+	lightBox.style.visibility = 'visible';
+	lightBox.style.opacity = '1'
+	}
+	function lightboxClose2() {
+	var lightBox = document.getElementById('lightbox2');
+	lightBox.style.visibility = 'hidden';
+	lightBox.style.opacity = '0'
+	}
+	</script>
+	<script>
+	function lightboxOpen3() {
+	var lightBox = document.getElementById('lightbox3');
+	lightBox.style.visibility = 'visible';
+	lightBox.style.opacity = '1'
+	}
+	function lightboxClose3() {
+	var lightBox = document.getElementById('lightbox3');
+	lightBox.style.visibility = 'hidden';
+	lightBox.style.opacity = '0'
+	}
+	</script>
+	<script>
+	function lightboxOpen4() {
+	var lightBox = document.getElementById('lightbox4');
+	lightBox.style.visibility = 'visible';
+	lightBox.style.opacity = '1'
+	}
+	function lightboxClose4() {
+	var lightBox = document.getElementById('lightbox4');
+	lightBox.style.visibility = 'hidden';
+	lightBox.style.opacity = '0'
+	}
+	</script>
+	<script>
+	function lightboxOpen5() {
+	var lightBox = document.getElementById('lightbox5');
+	lightBox.style.visibility = 'visible';
+	lightBox.style.opacity = '1'
+	}
+	function lightboxClose5() {
+	var lightBox = document.getElementById('lightbox5');
+	lightBox.style.visibility = 'hidden';
+	lightBox.style.opacity = '0'
+	}
+	</script>
+	<script>
+	function lightboxOpen6() {
+	var lightBox = document.getElementById('lightbox6');
+	lightBox.style.visibility = 'visible';
+	lightBox.style.opacity = '1'
+	}
+	function lightboxClose6() {
+	var lightBox = document.getElementById('lightbox6');
+	lightBox.style.visibility = 'hidden';
+	lightBox.style.opacity = '0'
+	}
 	</script>
 </body>
 </html>
