@@ -147,6 +147,10 @@ p {
 .cream {
 	color: var(--cream);
 }
+.left-align {
+	text-align: left;
+	width: 100%;
+}
 /*HTML*/
 html {
 	scroll-behavior: smooth;
@@ -902,6 +906,9 @@ header {
 }
 .no-margin {
 	margin: 0;
+}
+.no-margin-bot {
+	margin-bottom: 0;
 }
 .body-link {
 	color: var(--mint);
